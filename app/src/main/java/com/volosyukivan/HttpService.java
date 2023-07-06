@@ -124,7 +124,7 @@ public class HttpService extends Service {
     CharSequence contentText = addr;
     Intent notificationIntent = new Intent(this, WiFiKeyboard.class);
     PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
-    // notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
+    notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
 //    startForeground(0, notification);
 //    setForeground(true);
     NotificationManager mgr =
