@@ -135,6 +135,9 @@ public final class KeyboardHttpConnection extends HttpConnection {
     byte[] headers = String.format("HTTP/1.1 200 OK\n" +
         "Content-Type: %s\n"+
         "Content-Length: %d\n" +
+        "Access-Control-Allow-Origin: *\n" +
+        "Access-Control-Allow-Methods: OPTIONS, POST, GET\n" +
+        "Access-Control-Max-Age: 2592000\n" + 
         "\n", content_type, content_length).getBytes();
 
     ByteBuffer out = ByteBuffer.allocate(headers.length + content_length);
